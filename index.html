@@ -1,29 +1,26 @@
 <!DOCTYPE HTML>
 <HTML>
     <head>
-
-</head>
+        <script src="https://cirrus-sccommunity-1779bc252-17b8135c3c4.force.com/napili/lightning/lightning.out.js"></script>
+    </head>
     <BODY>
-        <H1>Harada LS Test3-1</H1>
+        <H1>Harada LS Test3-2</H1>
         <H2>Setting up a schedule for an unauthenticated (guest) user</H2>
-        
-<script src="https://cirrus-sccommunity-1779bc252-17b8135c3c4.force.com/napili/lightning/lightning.out.js"></script>
 
 <script>
-    $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
-        function() {
-            $Lightning.createComponent(
-                "lightning:flow",
-                {},
-                "lexcontainer",
-                function(component) {
-                    component.startFlow(”HRDNewforGuest”);
-                }
-            );
-        },    'https://cirrus-sccommunity-1779bc252-17b8135c3c4.force.com/napili'  // Site endpoint
-    );
+$Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+	function() {
+		$Lightning.createComponent(
+			"lightning:flow",
+			{ },
+			"lexcontainer",
+			function(component) {
+				component.startFlow(”HRDNewforGuest”);
+			}
+		);
+	},'https://cirrus-sccommunity-1779bc252-17b8135c3c4.force.com/napili'
+);
 </script>
-    
-    
+
     </BODY>
 </HTML>
