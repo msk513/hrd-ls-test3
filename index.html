@@ -1,26 +1,22 @@
-<!DOCTYPE HTML>
-<HTML>
+<html>
     <head>
         <script src="https://cirrus-sccommunity-1779bc252-17b8135c3c4.force.com/napili/lightning/lightning.out.js"></script>
     </head>
-    <BODY>
-        <H1>Harada LS Test3-9</H1>
-        <H2>Setting up a schedule for an unauthenticated (guest) user</H2>
-
-<script>
-$Lightning.use("runtime_appointmentbooking:lightningOutGuest",
-	function() {
-		$Lightning.createComponent(
-			"lightning:flow",
-			{},
-			"lexcontainer",
-			function(component) {
-				component.startFlow("HRDNewforGuest");
-			}
-		);
-	}, "https://cirrus-sccommunity-1779bc252-17b8135c3c4.force.com"
-);
+<body>
+<h1>TEST</h1>
+    <div id="lexcontainer" aura:id="lexcontainer"></div>
+</body><script>
+    $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+        function() {                  // Callback once framework and app load
+            $Lightning.createComponent(
+                "lightning:flow",    // top-level component of your app
+                { },    // attributes to set on the component when created
+                "lexcontainer",    // the DOM location to insert the component
+                function(component) {            // API name of the Flow
+                    component.startFlow("HRDNewforGuest");
+                }
+            );
+        },    'https://cirrus-sccommunity-1779bc252-17b8135c3c4.force.com/napili'  // Site endpoint
+    );
 </script>
-
-    </BODY>
-</HTML>
+</html>
